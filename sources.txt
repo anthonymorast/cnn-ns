@@ -1,0 +1,21 @@
+- IbmFlowAroundCylinder.py = https://www.youtube.com/watch?v=M2PqI2JD2jo
+- ibpm: https://github.com/cwrowley/ibpm/tree/master/doc
+    - used by Raissi
+    - finickey
+- mantaflow: http://mantaflow.com/scenes.html
+    - probably not useful
+- http://www.algorizk.com/cfd/overview/
+    - phone app that does these things 
+- navier: https://github.com/dorchard/navier
+    - works well for low Reynolds numbers
+- Spectral Solution to NS2D (MatLab): https://github.com/dutykh/NavierStokes2D
+- nsbench: https://launchpad.net/nsbench/
+    - outdated, need to make this work with Python3 or get FEniCS installed for Python2
+- quickersim CFD:  
+    - free student version
+    - doesn't seem to work with a lot of Re numbers
+- ANSYS 
+    - free student version
+- jburkardt: http://people.sc.fsu.edu/~jburkardt/m_src/navier_stokes_mesh2d/navier_stokes_mesh2d.html
+    - tons of different things
+- dolfyn and other stuff: https://www.youtube.com/watch?v=IDeGDFZSYo8

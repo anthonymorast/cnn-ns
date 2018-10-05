@@ -15,25 +15,24 @@ function Plot (Om, t, ~)
     end
     %save(['data/soln',num2str(t,'%4.2f'), '_', num2str(Re, '%d'), '.mat'], "Om");
 
-    surf(X, Y, Om), grid off;
+    surf(X, Y, Om); 
+    grid off;
     shading interp;
     colormap(jet); 
     cc = colorbar;
-    xlim([-Lx Lx]); ylim([-Ly+dy Ly]); caxis([-1 1]);
+    xlim([-Lx Lx]); ylim([-Ly+dy Ly]); caxis([-1 1]); zlim([-1.2, 1.2]);
     xlabel('$x$', 'interpreter', 'latex', 'fontsize', 12);
     ylabel('$y$', 'interpreter', 'latex', 'fontsize', 12, 'Rotation', 1);
     xlabel(cc, '$\omega(x,y,t)$', 'interpreter', 'latex', 'fontsize', 12, 'Rotation', 90);
     
-    view([0 90]);
+    %view([0 90]);
     
     title (['Vorticity distribution at t = ',num2str(t,'%4.2f')], 'interpreter', 'latex', 'fontsize', 12);
-    
-    print(['imgs/',num2str(Re),'/soln',num2str(t,'%4.2f'), '_', num2str(Re, '%d'), '.png'], '-dpng');
     set(gcf, 'Color', 'w');
     
     % uncomment to remove x and y numbers (for data for CNN)
     %set(gca, 'YTick', []);
     %set(gca, 'XTick', []);
-    
     drawnow
+    print(['imgs/',num2str(Re),'/soln',num2str(t,'%4.2f'), '_', num2str(Re, '%d'), '.png'], '-dpng');
 end % Plot ()

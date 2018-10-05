@@ -20,7 +20,7 @@ global dy nu Dx Dy Kx Ky K2 Lx Ly Nx Ny Nxy X Y Re
 % ------------------------------------------------------------ %
 
 %%% Physical parameters:
-Re = 100;
+Re = 12500;
 nu = 1/Re;	% 1/Re or viscosity
 
 % ------------------------------------------------------------ %
@@ -72,15 +72,15 @@ Dy = 1i*Ky.*K2inv;		% v velocity component reconstruction from the vorticity
 fftw('planner', 'hybrid');
 
 %%% Set random number generator (for the initial condition)
-s = RandStream('mt19937ar','Seed',1);
-RandStream.setGlobalStream(s);
+%s = RandStream('mt19937ar','Seed',1);
+%RandStream.setGlobalStream(s);
 
 % ------------------------------------------------------------ %
 
 %%% Time-stepping parameters:
 t = 0.0;           	% the discrete time variable
-Tf = 200.0;          	% final simulation time
-ds = 0.1;			% write time of the results
+Tf = 25.0;          	% final simulation time
+ds = 0.2;			% write time of the results
 
 ops = odeset('RelTol', 1e-10, 'AbsTol', 1e-10, 'OutputFcn', @odetpbar);
 
