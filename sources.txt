@@ -1,3 +1,4 @@
+- https://scicomp.stackexchange.com/questions/7281/tutorial-for-flow-around-a-cylinder-in-fenics?newreg=7c782385e9f54d81a580e1afb4b40cb5 (information)
 - IbmFlowAroundCylinder.py = https://www.youtube.com/watch?v=M2PqI2JD2jo
 - ibpm: https://github.com/cwrowley/ibpm/tree/master/doc
     - used by Raissi
@@ -16,6 +17,12 @@
     - doesn't seem to work with a lot of Re numbers
 - ANSYS 
     - free student version
-- jburkardt: http://people.sc.fsu.edu/~jburkardt/m_src/navier_stokes_mesh2d/navier_stokes_mesh2d.html
+- jburkardt: http://people.sc.fsu.edu/~jburkardt/m_src/navier_stokes_mesh2d/navier_stokes_mesh2d.html **
     - tons of different things
-- dolfyn and other stuff: https://www.youtube.com/watch?v=IDeGDFZSYo8
+- dolfyn and other stuff: https://www.youtube.com/watch?v=IDeGDFZSYo8 **
+    - https://www.dolfyn.net/dolfyn/downloads_en.html
+- two-dimensional channel flow: http://people.ece.umn.edu/~mihailo/software/chebfun-svd/2dchannelflow.html **
+- https://github.com/anthonyam12/Navier-stokes-2D-numerical-solve-incompressible-flow-with-custom-scenarios-MATLAB-/blob/master/Readme.pdf ** 
+
+
+** didn't try
