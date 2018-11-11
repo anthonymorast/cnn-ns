@@ -29,8 +29,9 @@ if __name__ == '__main__':
         if filename.endswith('.ppm'):
             count += 1
             image = Image.open(indir+filename)
+            step = int(filename[-8:-4])*10
             if c:
                 image = crop(image)
-            image.save(outdir+filename[:-4]+'.png')
+            image.save(outdir+'re150_'+str(step)+'.png')
 
     print("Converted", count, "ppms to pngs.")
