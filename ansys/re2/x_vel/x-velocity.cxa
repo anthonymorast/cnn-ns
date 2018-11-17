@@ -2,7 +2,11 @@ AnimationSequence1.0
 NAME: D:/Users/anthony/Documents/GitHub/cnn-ns/ansys/re2/x_vel\\x-velocity
 WINID: 1
 STORAGE: 4
+<<<<<<< HEAD
 FRAMES: 300
+=======
+FRAMES: 135
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
 Frame 0 4 x-velocity_0000.ppm 1
 Frame 1 4 x-velocity_0001.ppm 1
 Frame 2 4 x-velocity_0002.ppm 1
@@ -138,6 +142,7 @@ Frame 131 4 x-velocity_0131.ppm 1
 Frame 132 4 x-velocity_0132.ppm 1
 Frame 133 4 x-velocity_0133.ppm 1
 Frame 134 4 x-velocity_0134.ppm 1
+<<<<<<< HEAD
 Frame 135 4 x-velocity_0135.ppm 1
 Frame 136 4 x-velocity_0136.ppm 1
 Frame 137 4 x-velocity_0137.ppm 1
@@ -303,3 +308,5 @@ Frame 296 4 x-velocity_0296.ppm 1
 Frame 297 4 x-velocity_0297.ppm 1
 Frame 298 4 x-velocity_0298.ppm 1
 Frame 299 4 x-velocity_0299.ppm 1
+=======
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5

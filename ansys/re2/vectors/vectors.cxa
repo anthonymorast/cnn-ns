@@ -2,7 +2,11 @@ AnimationSequence1.0
 NAME: D:/Users/anthony/Documents/GitHub/cnn-ns/ansys/re2/vectors\\vectors
 WINID: 5
 STORAGE: 4
+<<<<<<< HEAD
 FRAMES: 300
+=======
+FRAMES: 135
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
 Frame 0 4 vectors_0000.ppm 5
 Frame 1 4 vectors_0001.ppm 5
 Frame 2 4 vectors_0002.ppm 5
@@ -138,6 +142,7 @@ Frame 131 4 vectors_0131.ppm 5
 Frame 132 4 vectors_0132.ppm 5
 Frame 133 4 vectors_0133.ppm 5
 Frame 134 4 vectors_0134.ppm 5
+<<<<<<< HEAD
 Frame 135 4 vectors_0135.ppm 5
 Frame 136 4 vectors_0136.ppm 5
 Frame 137 4 vectors_0137.ppm 5
@@ -303,3 +308,5 @@ Frame 296 4 vectors_0296.ppm 5
 Frame 297 4 vectors_0297.ppm 5
 Frame 298 4 vectors_0298.ppm 5
 Frame 299 4 vectors_0299.ppm 5
+=======
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5

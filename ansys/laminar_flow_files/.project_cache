@@ -11,8 +11,14 @@ dp0/FFF-1/Fluent/FFF-1-1-00000.dat.gz
 dp0/FFF-1/Fluent/FFF-1-38-00000.dat.gz
 dp0/FFF-1/Fluent/FFF-1-38.cas.gz
 dp0/FFF-1/Fluent/FFF-1-Setup-Output.cas.gz
+<<<<<<< HEAD
 dp0/FFF-1/Fluent/FFF-1.1-48-00000.dat.gz
 dp0/FFF-1/Fluent/FFF-1.1-48.cas.gz
+=======
+dp0/FFF-1/Fluent/FFF-1.1-39-00000.dat.gz
+dp0/FFF-1/Fluent/FFF-1.1-39.cas.gz
+dp0/FFF-1/Fluent/FFF-1.1-40-03000.dat.gz
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
 dp0/FFF-1/Fluent/FFF-1.1-Setup-Output.cas.gz
 dp0/FFF-1/Fluent/FFF-1.1.ip
 dp0/FFF-1/Fluent/FFF-1.1.set
@@ -27,7 +33,10 @@ dp0/FFF-1/MECH/FFF-1.msh
 dp0/FFF-1/MECH/fluent-0-error.log
 dp0/FFF-1/MECH/fluent-999999-error.log
 dp0/FFF-1/Post/FlowAroundCylinder.cst
+<<<<<<< HEAD
 dp0/global/MECH/FFF-1/Figures and Images/StaticFigure10.png
+=======
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
 dp0/global/MECH/FFF-1.mshdb
 dp0/global/MECH/FFF.mshdb
 dp0/designPoint.wbdp
@@ -43,9 +52,12 @@ progress_files/dp0/FFF-1/Fluent/velocity_magnitude_contour.png
 session_files/journal1.wbjn
 session_files/journal1_crashed.wbjn
 session_files/journal2.wbjn
+<<<<<<< HEAD
 session_files/journal2_crashed.wbjn
 session_files/journal3.wbjn
 session_files/journal4.wbjn
+=======
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
 dp0/
 progress_files/
 session_files/
@@ -62,7 +74,10 @@ dp0/FFF-1/Post/
 dp0/global/MECH/
 dp0/global/MECH/FFF/
 dp0/global/MECH/FFF-1/
+<<<<<<< HEAD
 dp0/global/MECH/FFF-1/Figures and Images/
+=======
+>>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
 progress_files/dp0/
 progress_files/dp0/FFF/
 progress_files/dp0/FFF-1/
