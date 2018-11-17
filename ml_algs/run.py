@@ -52,6 +52,7 @@ def load_4D_data(train, test):
     return train_data, test_data
 
 if __name__ == '__main__':
+    bw = True
     train_path = 'train'
     test_path = 'test'
     train_file = 'train.csv'

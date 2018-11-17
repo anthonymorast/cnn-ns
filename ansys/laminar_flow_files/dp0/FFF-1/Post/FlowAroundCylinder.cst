@@ -1,4 +1,4 @@
-# State file created:  2018/10/11 18:45:35
+# State file created:  2018/10/28 19:01:02
 # CFX-19.2
 
 COMMENT:User Data
@@ -16,9 +16,9 @@ DATA READER:
   Construct Variables From Fourier Coefficients = True
   Current Case List = Case FlowAroundCylinder
   Current Case Name = D:\Users\anthony\Documents\GitHub\cnn-ns\ansys\\
-laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-43-03000.dat.gz
+laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-48-03000.dat.gz
   Current Results File = D:\Users\anthony\Documents\GitHub\cnn-ns\ansys\\
-laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-43-03000.dat.gz
+laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-48-03000.dat.gz
   Current Timestep = -1
   Current Timevalue = 0.3
   Edit Case Names = false
@@ -46,9 +46,9 @@ laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-43-03000.dat.gz
   CASE:Case FlowAroundCylinder
     Construct Variables From Fourier Coefficients = True
     Current Case Name = D:\Users\anthony\Documents\GitHub\cnn-ns\ansys\\
-laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-43-03000.dat.gz
+laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-48-03000.dat.gz
     Current Results File = D:\Users\anthony\Documents\GitHub\cnn-ns\ansys\\
-laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-43-03000.dat.gz
+laminar_flow_files\dp0\FFF-1\Fluent\FFF-1.1-48-03000.dat.gz
     Current Timestep = -1
     Current Timevalue = 0.3
     File Angle Units = rad
@@ -910,11 +910,11 @@ WIREFRAME:Wireframe
   Standard View = Isometric Y
   CAMERA:
     Option = Pivot Point and Quaternion
-    Pan = 6.91587,-0.589641
-    Pivot Point = -1,0,0
+    Pan = 0.354948,-0.263883
+    Pivot Point = -0.413112,0,0
     Rotation = -90, 0, 0
-    Rotation Quaternion = 0.0321633,0.321131,-0.0167297,0.946342
-    Scale = 0.389614
+    Rotation Quaternion = 0,0,0,1
+    Scale = 0.0554703
     Send To Viewer = True
   END
 END

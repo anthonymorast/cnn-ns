@@ -2,8 +2,8 @@ import os
 import csv
 
 if __name__ == '__main__':
-    test_dir = 'test'
-    train_dir = 'train'
+    test_dir = 'test_bw'
+    train_dir = 'train_bw'
 
     train_files = os.listdir(os.path.join('.', train_dir))
     test_files = os.listdir(os.path.join('.', test_dir))
@@ -17,7 +17,7 @@ if __name__ == '__main__':
         timestep = f[(f.index('_')+1):-4]
         rows.append([path, timestep, re])
 
-    with open('train.csv', 'w') as f:
+    with open('train_bw.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerows(rows)
 
@@ -30,6 +30,6 @@ if __name__ == '__main__':
         timestep = f[(f.index('_')+1):-4]
         rows.append([path, timestep, re])
 
-    with open('test.csv', 'w') as f:
+    with open('test_bw.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerows(rows)

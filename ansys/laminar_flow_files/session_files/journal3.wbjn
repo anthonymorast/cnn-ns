@@ -1,0 +1,8 @@
+# encoding: utf-8
+# Release 19.2
+SetScriptVersion(Version="19.2.120")
+system1 = GetSystem(Name="FFF 1")
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+results1.Exit()
+Save(Overwrite=True)
