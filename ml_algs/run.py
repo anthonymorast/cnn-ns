@@ -53,10 +53,11 @@ def load_4D_data(train, test):
 
 if __name__ == '__main__':
     bw = True
-    train_path = 'train'
-    test_path = 'test'
-    train_file = 'train.csv'
-    test_file = 'test.csv'
+
+    train_path = 'train' if not bw else 'train_bw'
+    test_path = 'test' if not bw else 'test_bw'
+    train_file = 'train.csv' if not bw else 'train_bw.csv'
+    test_file = 'test.csv' if not bw else 'test_bw.csv'
 
     train = pd.read_csv(train_file)
     # train = train.sample(frac=1).reset_index(drop=True)

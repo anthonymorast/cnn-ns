@@ -1,3 +1,5 @@
 *.ppm
 *.png
+*.npy
 **/data/
+**/tf_logs
