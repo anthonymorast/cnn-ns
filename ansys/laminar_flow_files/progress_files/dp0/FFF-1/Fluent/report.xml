@@ -113,11 +113,7 @@ Boundary Conditions
          Condition                       Value   
          -------------------------------------
          Velocity Specification Method   1       
-<<<<<<< HEAD
          X-Velocity (m/s)                1400    
-=======
-         X-Velocity (m/s)                1       
->>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
 
 </BoundaryConditions>
 

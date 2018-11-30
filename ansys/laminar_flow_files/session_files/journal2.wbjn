@@ -745,7 +745,6 @@ setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Solution Initialization
 setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Run Calculation"))')
 setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Run Calculation"))(cx-gui-do cx-activate-item "NavigationPane*List_Tree1")')
 setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Run Calculation"))')
-<<<<<<< HEAD
 setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Run Calculation*Table1*PushButton22(Calculate)")')
 setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Information*OK")')
 setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Postprocessing)*Table1*Table3(Animation)*PushButton3(Solution Playback)")')
@@ -866,5 +865,3 @@ setup1.SendCommand(Command="(cx-use-window-id 2)(cx-use-window-id 2)(cx-gui-do c
 setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Playback*Frame8*List1(Animation Sequences)\" '( 2))(cx-gui-do cx-activate-item \"Playback*Frame8*List1(Animation Sequences)\")(cx-gui-do cx-activate-item \"Playback*PanelButtons*PushButton1(Apply)\")")
 setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Playback*PanelButtons*PushButton2(Close)")')
 Save(Overwrite=True)
-=======
->>>>>>> 92ad549a63fd9083d85972a6812eacf9cb68cdd5
