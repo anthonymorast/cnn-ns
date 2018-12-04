@@ -32,7 +32,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">3068</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 36430, "Input": 3066, "Output": 3066}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 36451, "Input": 3066, "Output": 3066}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <unique-system-dir valType="String">FFF</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
@@ -296,8 +296,8 @@
       <container-type valType="String">Ansys.DesignModeler.Core.Addin:Geometry</container-type>
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
-      <last-updated valType="Int64">14876</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 36432, "Input": 14874, "Output": 14874}</last-modified-by-usage>
+      <last-updated valType="Int64">36449</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 36453, "Input": 36447, "Output": 36447}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <unique-system-dir valType="String">FFF-1</unique-system-dir>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
@@ -380,6 +380,16 @@
       <Object Name="/Geometry 2/SpaceClaimCallBackData:SCDataObject 13" Version="1.0">
         <class-type valType="String">SpaceClaimCallBackData</class-type>
         <object-name valType="String">SCDataObject 13</object-name>
+        <member-data valType="String">{"DisplayText": "SCDataObject", "Guid": "3d0399b0-2f31-4df9-899f-923c19d59b4b"}</member-data>
+      </Object>
+      <Object Name="/Geometry 2/SpaceClaimCallBackData:SCDataObject 14" Version="1.0">
+        <class-type valType="String">SpaceClaimCallBackData</class-type>
+        <object-name valType="String">SCDataObject 14</object-name>
+        <member-data valType="String">{"DisplayText": "SCDataObject", "Guid": "3d0399b0-2f31-4df9-899f-923c19d59b4b"}</member-data>
+      </Object>
+      <Object Name="/Geometry 2/SpaceClaimCallBackData:SCDataObject 15" Version="1.0">
+        <class-type valType="String">SpaceClaimCallBackData</class-type>
+        <object-name valType="String">SCDataObject 15</object-name>
         <member-data valType="String">{"DisplayText": "SCDataObject", "Guid": "3d0399b0-2f31-4df9-899f-923c19d59b4b"}</member-data>
       </Object>
     </Container>
