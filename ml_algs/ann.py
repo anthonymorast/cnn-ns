@@ -6,7 +6,7 @@ from keras.callbacks import ModelCheckpoint, TensorBoard
 
 class ANN(object):
     def __init__(self, input_size, num_hidden_layers, hidden_layer_sizes, output_size,
-                 epochs=50, batch_size=1, fit_verbose=2, variables=None):
+                 epochs=50, batch_size=1, fit_verbose=2, variables=None, optimizer='adam'):
         self.input_size = input_size
         self.num_hidden_layers = num_hidden_layers
         self.hidden_layer_sizes = hidden_layer_sizes
@@ -14,6 +14,7 @@ class ANN(object):
         self.epochs = epochs
         self.batch_size = batch_size
         self.verbose = fit_verbose
+        self.optimizer = optimizer
 
         self.build_model()
 
@@ -24,8 +25,8 @@ class ANN(object):
         for i in range(1, self.num_hidden_layers - 1):
             self.model.add(Dense(self.hidden_layer_sizes[i], activation='relu'))
         self.model.add(Dense(self.hidden_layer_sizes[len(self.hidden_layer_sizes) - 1], activation='relu'))
-        self.model.add(Dense(self.output_size, activation='sigmoid'))
-        self.model.compile(loss='mean_squared_error', optimizer='adam', metrics=['mae'])
+        self.model.add(Dense(self.output_size, activation=None))
+        self.model.compile(loss='mean_squared_error', optimizer=self.optimizer, metrics=['mae'])
 
     def predict(self, data):
         """
