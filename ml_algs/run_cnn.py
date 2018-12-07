@@ -83,12 +83,12 @@ if __name__ == '__main__':
     train_y, test_y = train.iloc[:,2], test.iloc[:,2]
 
     image_size = np.asarray([train_x.shape[1], train_x.shape[2], train_x.shape[3]])
-    m = get_model2(image_size)
-    # m = load_model('model-232.h5')
+    # m = get_model2(image_size)
+    m = load_model('4d_color_after500/model-232.h5')
 
-    checkpoint = ModelCheckpoint('model-{epoch:03d}.h5', verbose=1, monitor='mean_absolute_error', save_best_only=True, mode='min')
-    tensorboard = TensorBoard(log_dir='./tf_logs', histogram_freq=10, write_graph=True, write_grads=True, write_images=True)
-    m.fit(train_x, train_y, validation_data=(test_x, test_y), epochs=250, callbacks=[checkpoint, tensorboard])
+    # checkpoint = ModelCheckpoint('model-{epoch:03d}.h5', verbose=1, monitor='mean_absolute_error', save_best_only=True, mode='min')
+    # tensorboard = TensorBoard(log_dir='./tf_logs', histogram_freq=10, write_graph=True, write_grads=True, write_images=True)
+    # m.fit(train_x, train_y, validation_data=(test_x, test_y), epochs=250, callbacks=[checkpoint, tensorboard])
 
     y_hat = m.predict(test_x)
     predictions = open('predictions.dat', 'w')

@@ -1,3 +1,20 @@
+"""
+    More abstraction for Keras (which is obviously needed). This class can create and
+    train a model or load a model or model weights from hdf5 filesselfself.
+
+    Examples:
+    1. Create a model:
+        num_layers = 15
+        sizes = [100 for _ in range(num_layers)]
+        model = ANN(input_size=trainx.shape[1], num_hidden_layers=num_layers, hidden_layer_sizes=sizes,
+                      output_size=1, epochs=250, batch_size=32, fit_verbose=1, optimizer='adam')
+        model.build_model()
+
+    2. Load a model
+        model = ANN()
+        model.load_model('numerical_all/15x100NN_all/nn15x100_ep195.h5')
+"""
+
 from keras.models import Sequential, load_model
 from keras.layers import Dense, Activation
 from keras.utils import plot_model
@@ -5,7 +22,7 @@ from keras.callbacks import ModelCheckpoint, TensorBoard
 
 
 class ANN(object):
-    def __init__(self, input_size, num_hidden_layers, hidden_layer_sizes, output_size,
+    def __init__(self, input_size=None, num_hidden_layers=0, hidden_layer_sizes=[], output_size=0,
                  epochs=50, batch_size=1, fit_verbose=2, variables=None, optimizer='adam'):
         self.input_size = input_size
         self.num_hidden_layers = num_hidden_layers
@@ -16,8 +33,6 @@ class ANN(object):
         self.verbose = fit_verbose
         self.optimizer = optimizer
 
-        self.build_model()
-
     def build_model(self):
         self.model = Sequential()
         self.model.add(Dense(self.hidden_layer_sizes[0], input_shape=(self.input_size, ),
@@ -25,8 +40,14 @@ class ANN(object):
         for i in range(1, self.num_hidden_layers - 1):
             self.model.add(Dense(self.hidden_layer_sizes[i], activation='relu'))
         self.model.add(Dense(self.hidden_layer_sizes[len(self.hidden_layer_sizes) - 1], activation='relu'))
-        self.model.add(Dense(self.output_size, activation=None))
+        self.model.add(Dense(self.output_size, activation='relu'))
         self.model.compile(loss='mean_squared_error', optimizer=self.optimizer, metrics=['mae'])
+
+    def load_model(self, filename):
+        """
+            Loads a Keras model from an HDF5 file.
+        """
+        self.model = load_model(filename)
 
     def predict(self, data):
         """

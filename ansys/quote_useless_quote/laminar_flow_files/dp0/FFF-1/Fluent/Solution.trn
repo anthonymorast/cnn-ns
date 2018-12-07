@@ -1,0 +1,30 @@
+
+Build Time: Aug  8 2018 13:38:56 
+Executable Path: D:/Program Files/ANSYSI~1/ANSYSS~1/v192/fluent/ntbin/win64/fluent.exe
+
+-------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID     Vendor                     
+-------------------------------------------------------------------------------
+n5    WHITERUN  6/12  Windows-x64  117572  Intel(R) Core(TM) i7-4930K 
+n4    WHITERUN  5/12  Windows-x64  123164  Intel(R) Core(TM) i7-4930K 
+n3    WHITERUN  4/12  Windows-x64  122688  Intel(R) Core(TM) i7-4930K 
+n2    WHITERUN  3/12  Windows-x64  115928  Intel(R) Core(TM) i7-4930K 
+n1    WHITERUN  2/12  Windows-x64  122760  Intel(R) Core(TM) i7-4930K 
+n0*   WHITERUN  1/12  Windows-x64  92708   Intel(R) Core(TM) i7-4930K 
+host  WHITERUN        Windows-x64  119984  Intel(R) Core(TM) i7-4930K 
+
+MPI Option Selected: ibmmpi
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+Multicore SMT processors detected. Processor affinity set!
+Reading "D:\Users\anthony\Documents\GitHub\cnn-ns\ansys\laminar_flow_files\dp0\FFF-1\MECH\FFF-1.2.msh"...
+Buffering for file scan...
+
+   16143 nodes, binary.
+     504 nodes, binary.
+   42613 2D interior faces, zone  1, binary.
+     230 2D wall faces, zone  5, binary.
+      58 2D velocity-inlet faces, zone  6, binary.
+      58 2D pressure-outlet faces, zone  7, binary.
+     158 2D wall faces, zone  8, binary.
+   26470 mixed cells, zone  2, binary.

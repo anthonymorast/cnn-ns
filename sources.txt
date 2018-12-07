@@ -1,3 +1,6 @@
+None of this matters. Use ANSYS, OpenFOAM, or PyCFD
+
+
 - https://scicomp.stackexchange.com/questions/7281/tutorial-for-flow-around-a-cylinder-in-fenics?newreg=7c782385e9f54d81a580e1afb4b40cb5 (information)
 - IbmFlowAroundCylinder.py = https://www.youtube.com/watch?v=M2PqI2JD2jo
 - ibpm: https://github.com/cwrowley/ibpm/tree/master/doc
