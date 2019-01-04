@@ -1,0 +1,122 @@
+
+Build Time: Aug  8 2018 13:38:56 
+Executable Path: D:/Program Files/ANSYSI~1/ANSYSS~1/v192/fluent/ntbin/win64/fluent.exe
+
+-------------------------------------------------------------------------------
+ID    Hostname  Core   O.S.         PID    Vendor                     
+-------------------------------------------------------------------------------
+n11   WHITERUN  12/12  Windows-x64  12356  Intel(R) Core(TM) i7-4930K 
+n10   WHITERUN  11/12  Windows-x64  21188  Intel(R) Core(TM) i7-4930K 
+n9    WHITERUN  10/12  Windows-x64  19564  Intel(R) Core(TM) i7-4930K 
+n8    WHITERUN  9/12   Windows-x64  14460  Intel(R) Core(TM) i7-4930K 
+n7    WHITERUN  8/12   Windows-x64  21420  Intel(R) Core(TM) i7-4930K 
+n6    WHITERUN  7/12   Windows-x64  14164  Intel(R) Core(TM) i7-4930K 
+n5    WHITERUN  6/12   Windows-x64  6600   Intel(R) Core(TM) i7-4930K 
+n4    WHITERUN  5/12   Windows-x64  13056  Intel(R) Core(TM) i7-4930K 
+n3    WHITERUN  4/12   Windows-x64  16640  Intel(R) Core(TM) i7-4930K 
+n2    WHITERUN  3/12   Windows-x64  532    Intel(R) Core(TM) i7-4930K 
+n1    WHITERUN  2/12   Windows-x64  14600  Intel(R) Core(TM) i7-4930K 
+n0*   WHITERUN  1/12   Windows-x64  20996  Intel(R) Core(TM) i7-4930K 
+host  WHITERUN         Windows-x64  13464  Intel(R) Core(TM) i7-4930K 
+
+MPI Option Selected: ibmmpi
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+Reading "D:\Users\anthony\Documents\GitHub\cnn-ns\ansys\object_detection_files\dp0\FFF\MECH\FFF.msh"...
+Buffering for file scan...
+
+  177361 nodes, binary.
+     600 nodes, binary.
+  500457 2D interior faces, zone  1, binary.
+     632 2D interior faces, zone  2, binary.
+     100 2D velocity-inlet faces, zone  6, binary.
+     100 2D wall faces, zone  7, binary.
+     100 2D wall faces, zone  8, binary.
+     100 2D wall faces, zone  9, binary.
+     200 2D wall faces, zone 10, binary.
+  323726 mixed cells, zone  3, binary.
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts............,
+		faces............,
+		nodes............,
+		cells............,
+        bandwidth reduction using Reverse Cuthill-McKee: 27313/189 = 144.513
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	me
+	obj2
+	obj1
+	oulet
+	inlet
+	solid-fff_surface
+	fff_surface
+	interior-fff_surfaceSetting solid-fff_surface (mixture) ... Done.
+
+Applying mesh operation "Change Zone Type"
+ Setting zone id of solid-fff_surface to 3.
+ Setting zone id of oulet to 7.
+ Setting zone id of interior-fff_surface to 1.
+ Setting zone id of fff_surface to 2.
+ Setting zone id of inlet to 6.
+ Setting zone id of obj1 to 8.
+ Setting zone id of obj2 to 9.
+ Setting zone id of me to 10.
+Done.
+Setting solid-fff_surface (mixture) ... Done.
+Setting oulet (mixture) ... Done.
+Setting interior-fff_surface (mixture) ... Done.
+Setting fff_surface (mixture) ... Done.
+Setting inlet (mixture) ... Done.
+Setting obj1 (mixture) ... Done.
+Setting obj2 (mixture) ... Done.
+Setting me (mixture) ... Done.
+
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+
+Setting Post Processing and Surfaces information ...	 Done.
+Writing "| gzip -2cf > FFF-Setup-Output.cas.gz"...
+Writing temporary file C:\\Users\\ANTHON~1\\AppData\\Local\\Temp\\flntgz-134642 ...
+  323726 mixed cells, zone  3, binary.
+  323726 cell partition ids, zone  3, 12 partitions, binary.
+  500457 2D interior faces, zone  1, binary.
+     632 2D interior faces, zone  2, binary.
+     100 2D velocity-inlet faces, zone  6, binary.
+     100 2D pressure-outlet faces, zone  7, binary.
+     100 2D wall faces, zone  8, binary.
+     100 2D wall faces, zone  9, binary.
+     200 2D wall faces, zone 10, binary.
+  177961 nodes, binary.
+  177961 node flags, binary.
+Done.
+
+
+Performance Timer for 0 iterations on 12 compute nodes
+  Average wall-clock time per iteration:              0.000 sec
+  Global reductions per iteration:                        0 ops
+  Global reductions time per iteration:               0.000 sec (0.0%)
+  Message count per iteration:                            0 messages
+  Data transfer per iteration:                        0.000 MB
+  LE solves per iteration:                                0 solves
+  LE wall-clock time per iteration:                   0.000 sec (0.0%)
+  LE global solves per iteration:                         0 solves
+  LE global wall-clock time per iteration:            0.000 sec (0.0%)
+  LE global matrix maximum size:                         0
+  AMG cycles per iteration:                           0.000 cycles
+  Relaxation sweeps per iteration:                        0 sweeps
+  Relaxation exchanges per iteration:                     0 exchanges
+  LE early protections (stall) per iteration:           0.000 times
+  LE early protections (divergence) per iteration:      0.000 times
+
+  Total wall-clock time:                              0.000 sec
+

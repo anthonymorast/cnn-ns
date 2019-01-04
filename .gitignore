@@ -1,6 +1,9 @@
 *.ppm
 *.png
 *.npy
+*.h5
 **/data/
 **/tf_logs
-
+**/green
+**/red
+**/pink
