@@ -1,9 +1,9 @@
 import numpy as np
 
-xmin = -0.5
-xmax = 3.5
-ymin = -0.5
-ymax = 1.5
+xmin = -2.5
+xmax = 4.5
+ymin = -2.5
+ymax = 2.5
 
 multiplier = 50     # determines fidelity of data 100 -> steps 0.01, 0.02, 0.03, etc.
 
