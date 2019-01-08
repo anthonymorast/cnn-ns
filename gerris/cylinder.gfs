@@ -14,13 +14,12 @@
 # Run to create MPI file (might not work the best, check file and update pid's after running):
 #  gerris2D -b <num_procs> cylinder.gfs > parallel.gfs
 #######
-25 38 GfsSimulation GfsBox GfsGEdge {} {
-
+35 52 GfsSimulation GfsBox GfsGEdge {} {
   # Stop the simulation at t = 15
-  Time { end = 15 }
+  Time { end = 10 }
 
   # Use an initial refinement of 6 levels (i.e. 2^6=64x64 for each box)
-  Refine 7
+  Refine 8
 
   Solid (x*x + y*y - 0.05*0.05)
   Solid ((x-1)*(x-1) + (y*y) - 0.05*0.05)
@@ -53,7 +52,7 @@
     min = -4 max = 4 v = U
   }
 
-  OutputLocation { step = 0.5 } data positions
+  OutputLocation { step = 0.05 } data positions
 
   # Pipes a bitmap PPM image representation of the vorticity field at time 15
   # into the ImageMagick converter "convert" to create the corresponding EPS file
@@ -69,10 +68,8 @@
 GfsBox {}
 GfsBox {}
 GfsBox {
-  right = BoundaryOutflow 
 }
 GfsBox {
-  right = BoundaryOutflow 
 }
 GfsBox {}
 GfsBox {}
@@ -99,7 +96,6 @@ GfsBox {}
 GfsBox {}
 GfsBox {}
 GfsBox {
-  right = BoundaryOutflow 
 }
 GfsBox {}
 GfsBox {
@@ -124,10 +120,8 @@ GfsBox {}
 GfsBox {}
 GfsBox {}
 GfsBox {
-  right = BoundaryOutflow 
 }
 GfsBox {
-  right = BoundaryOutflow 
 }
 GfsBox {}
 GfsBox {}
@@ -140,6 +134,26 @@ GfsBox {
     BcDirichlet U 2
     BcDirichlet T { return y < 0. ? 1. : 0.; }
   }
+}
+GfsBox{}
+GfsBox{}
+GfsBox{}
+GfsBox{}
+GfsBox{}
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox {
+  right = BoundaryOutflow 
 }
 
 # top half
@@ -185,3 +199,21 @@ GfsBox {
 17 24 bottom 
 18 23 bottom
 19 22 bottom
+
+# extended right
+13 26 right
+4 27 right
+3 28 right
+20 29 right
+21 30 right
+
+30 31 right
+31 32 top
+32 33 top 
+33 34 top
+34 35 top
+
+26 35 right
+27 34 right
+28 33 right
+29 32 right
