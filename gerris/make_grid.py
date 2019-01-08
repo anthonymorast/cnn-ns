@@ -1,6 +1,6 @@
 import numpy as np
 
-xmin = -2.5
+xmin = 0
 xmax = 4.5
 ymin = -2.5
 ymax = 2.5
