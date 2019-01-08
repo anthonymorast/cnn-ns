@@ -19,13 +19,19 @@
   Time { end = 10 }
 
   # Use an initial refinement of 6 levels (i.e. 2^6=64x64 for each box)
-  Refine 8
+  Refine 6
 
-  Solid ((x+1.5)*(x+1.5) + (y)*(y) - 0.05*0.05)
-  Solid ((x+1.3)*(x+1.3) + (y)*(y) - 0.05*0.05)
+  Solid ((x+2)*(x+2) + (y-0.5)*(y-0.5) - 0.05*0.05)
+  Solid ((x+2)*(x+2) + (y+0.5)*(y+0.5) - 0.05*0.05)
 
   # Add a passive tracer called T
   VariableTracer {} T
+
+  # Can drastically speed up calculations by chaning the coarseness of the mesh.
+  # These to properties ensure the coarseness is at least 6 but up to 10 for 
+  # areas with "a lot going on", i.e. vortical motion.
+  AdaptVorticity {istep=1} { maxlevel = 10 minlevel=6 cmax=1e-2 }
+  AdaptGradient { istep=1 } { maxlevel = 10 minlevel=6 cmax=1e-2 }
 
   # Set the initial x-component of the velocity (REMEMBER TO UPDATE THE BCs)
   Init {} { U = 2 }
