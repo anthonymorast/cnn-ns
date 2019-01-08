@@ -14,15 +14,15 @@
 # Run to create MPI file (might not work the best, check file and update pid's after running):
 #  gerris2D -b <num_procs> cylinder.gfs > parallel.gfs
 #######
-35 52 GfsSimulation GfsBox GfsGEdge {} {
+35 58 GfsSimulation GfsBox GfsGEdge {} {
   # Stop the simulation at t = 15
   Time { end = 10 }
 
   # Use an initial refinement of 6 levels (i.e. 2^6=64x64 for each box)
   Refine 8
 
-  Solid (x*x + y*y - 0.05*0.05)
-  Solid ((x-1)*(x-1) + (y*y) - 0.05*0.05)
+  Solid ((x+1.5)*(x+1.5) + (y)*(y) - 0.05*0.05)
+  Solid ((x+1.3)*(x+1.3) + (y)*(y) - 0.05*0.05)
 
   # Add a passive tracer called T
   VariableTracer {} T
@@ -65,155 +65,145 @@
 
 }
 
-GfsBox {}
-GfsBox {}
-GfsBox {
-}
-GfsBox {
-}
-GfsBox {}
-GfsBox {}
-GfsBox {}
-GfsBox {
-  # Left boundary on the leftmost boxes is:
-  #   Dirichlet U=1 for the x-component of the velocity
-  #   Dirichlet T = 1 if y < 0, 0 otherwise
-  left = Boundary {
-    BcDirichlet U 2
-    BcDirichlet T { return y < 0. ? 1. : 0.; }
-  }
-}
-GfsBox {
-  # Left boundary on the leftmost boxes is:
-  #   Dirichlet U=1 for the x-component of the velocity
-  #   Dirichlet T = 1 if y < 0, 0 otherwise
-  left = Boundary {
-    BcDirichlet U 2
-    BcDirichlet T { return y < 0. ? 1. : 0.; }
-  }
-}
-GfsBox {}
-GfsBox {}
-GfsBox {}
-GfsBox {
-}
-GfsBox {}
-GfsBox {
-  # Left boundary on the leftmost boxes is:
-  #   Dirichlet U=1 for the x-component of the velocity
-  #   Dirichlet T = 1 if y < 0, 0 otherwise
-  left = Boundary {
-    BcDirichlet U 2
-    BcDirichlet T { return y < 0. ? 1. : 0.; }
-  }
-}
-GfsBox {
-  # Left boundary on the leftmost boxes is:
-  #   Dirichlet U=1 for the x-component of the velocity
-  #   Dirichlet T = 1 if y < 0, 0 otherwise
-  left = Boundary {
-    BcDirichlet U 2
-    BcDirichlet T { return y < 0. ? 1. : 0.; }
-  }
-}
-GfsBox {}
-GfsBox {}
-GfsBox {}
-GfsBox {
-}
-GfsBox {
-}
-GfsBox {}
-GfsBox {}
-GfsBox {}
-GfsBox {
-  # Left boundary on the leftmost boxes is:
-  #   Dirichlet U=1 for the x-component of the velocity
-  #   Dirichlet T = 1 if y < 0, 0 otherwise
-  left = Boundary {
-    BcDirichlet U 2
-    BcDirichlet T { return y < 0. ? 1. : 0.; }
-  }
-}
 GfsBox{}
 GfsBox{}
 GfsBox{}
 GfsBox{}
-GfsBox{}
-GfsBox {
-  right = BoundaryOutflow 
-}
-GfsBox {
-  right = BoundaryOutflow 
-}
-GfsBox {
-  right = BoundaryOutflow 
-}
-GfsBox {
-  right = BoundaryOutflow 
-}
 GfsBox {
   right = BoundaryOutflow 
 }
 
-# top half
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox{}
+GfsBox{}
+GfsBox{}
+GfsBox{}
+
+GfsBox{}
+GfsBox {
+  left = Boundary {
+    BcDirichlet U 2
+    BcDirichlet T { return y < 0. ? 1. : 0.; }
+  }
+}
+GfsBox {
+  left = Boundary {
+    BcDirichlet U 2
+    BcDirichlet T { return y < 0. ? 1. : 0.; }
+  }
+}
+GfsBox{}
+GfsBox{}
+
+GfsBox{}
+GfsBox{}
+GfsBox{}
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox{}
+
+GfsBox {
+  left = Boundary {
+    BcDirichlet U 2
+    BcDirichlet T { return y < 0. ? 1. : 0.; }
+  }
+}
+GfsBox {
+  left = Boundary {
+    BcDirichlet U 2
+    BcDirichlet T { return y < 0. ? 1. : 0.; }
+  }
+}
+GfsBox{}
+GfsBox{}
+GfsBox{}
+
+GfsBox{}
+GfsBox{}
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox {
+  right = BoundaryOutflow 
+}
+GfsBox{}
+
+GfsBox{}
+GfsBox{}
+GfsBox{}
+GfsBox{}
+GfsBox {
+  left = Boundary {
+    BcDirichlet U 2
+    BcDirichlet T { return y < 0. ? 1. : 0.; }
+  }
+}
+
+
 1 2 right
 2 3 right
-3 4 top 
-4 5 left 
-5 6 left
-6 7 left 
+3 4 right
+4 5 right
+5 6 top
+6 7 left
 7 8 left
-8 9 top 
-9 10 right 
-10 11 right 
-11 12 right
-12 13 right
-
-# bottom half
-1 14 left
-14 15 left
-15 16 bottom
-16 17 right 
+8 9 left
+9 10 left
+10 11 left
+11 12 left
+12 13 top 
+13 14 right
+14 15 right
+15 16 right
+16 17 right
 17 18 right
 18 19 right
-19 20 right
-20 21 bottom
-21 22 left
-22 23 left
-23 24 left
-24 25 left
+1 20 left
+20 21 left
+21 22 bottom
+22 23 right
+23 24 right
+24 25 right
+25 26 right
+26 27 right
+27 28 right
+28 29 bottom
+29 30 left
+30 31 left
+31 32 left
+32 33 left
+33 34 left
+34 35 left
+# 34 connections (left-right)
 
-# ups and downs
-13 4 bottom
-12 5 bottom
-3 20 bottom
-11 6 bottom
-10 7 bottom
-7 14 bottom
-6 1 bottom
-5 2 bottom
-14 17 bottom
-1 18 bottom
-2 19 bottom
-17 24 bottom 
-18 23 bottom
-19 22 bottom
+14 11 bottom
+15 10 bottom
+16 9 bottom
+17 8 bottom
+18 7 bottom
+19 6 bottom
 
-# extended right
-13 26 right
-4 27 right
-3 28 right
-20 29 right
-21 30 right
+12 21 bottom
+11 20 bottom
+10 1 bottom 
+9 2 bottom
+8 3 bottom
+7 4 bottom
 
-30 31 right
-31 32 top
-32 33 top 
-33 34 top
-34 35 top
+20 23 bottom
+1 24 bottom
+2 25 bottom
+3 26 bottom
+4 27 bottom
+5 28 bottom
 
-26 35 right
-27 34 right
-28 33 right
-29 32 right
+22 35 bottom
+23 34 bottom
+24 33 bottom
+25 32 bottom
+26 31 bottom
+27 30 bottom
+
