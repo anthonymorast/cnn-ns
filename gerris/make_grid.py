@@ -5,7 +5,7 @@ xmax = 3.5
 ymin = -0.5
 ymax = 1.5
 
-multiplier = 20     # determines fidelity of data 100 -> steps 0.01, 0.02, 0.03, etc.
+multiplier = 50     # determines fidelity of data 100 -> steps 0.01, 0.02, 0.03, etc.
 
 ysteps = abs(ymin-ymax)*multiplier + 1
 xsteps = abs(xmin-xmax)*multiplier + 1

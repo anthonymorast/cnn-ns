@@ -3393,43 +3393,43 @@
   beta      = 1
 }
 }
-GfsBox { id = 1 pid = 2 size = 1 x = 0 y = 0 z = 0 }
-GfsBox { id = 2 pid = 2 size = 1 x = 1 y = 0 z = 0 }
-GfsBox { id = 3 pid = 2 size = 1 x = 2 y = 0 z = 0 right = GfsBoundaryOutflow }
-GfsBox { id = 4 pid = 6 size = 1 x = 2 y = 1 z = 0 right = GfsBoundaryOutflow }
-GfsBox { id = 5 pid = 2 size = 1 x = 1 y = 1 z = 0 }
-GfsBox { id = 6 pid = 1 size = 1 x = 0 y = 1 z = 0 }
-GfsBox { id = 7 pid = 5 size = 1 x = -1 y = 1 z = 0 }
-GfsBox { id = 8 pid = 5 size = 1 x = -2 y = 1 z = 0 left = GfsBoundary {
+GfsBox { id = 1 pid = 3 size = 1 x = 0 y = 0 z = 0 }
+GfsBox { id = 2 pid = 14 size = 1 x = 1 y = 0 z = 0 }
+GfsBox { id = 3 pid = 0 size = 1 x = 2 y = 0 z = 0 right = GfsBoundaryOutflow }
+GfsBox { id = 4 pid = 10 size = 1 x = 2 y = 1 z = 0 right = GfsBoundaryOutflow }
+GfsBox { id = 5 pid = 7 size = 1 x = 1 y = 1 z = 0 }
+GfsBox { id = 6 pid = 6 size = 1 x = 0 y = 1 z = 0 }
+GfsBox { id = 7 pid = 1 size = 1 x = -1 y = 1 z = 0 }
+GfsBox { id = 8 pid = 17 size = 1 x = -2 y = 1 z = 0 left = GfsBoundary {
 GfsBcDirichlet T { return y < 0. ? 1. : 0.; }
 GfsBcDirichlet U 2
 } }
-GfsBox { id = 9 pid = 5 size = 1 x = -2 y = 2 z = 0 left = GfsBoundary {
+GfsBox { id = 9 pid = 9 size = 1 x = -2 y = 2 z = 0 left = GfsBoundary {
 GfsBcDirichlet T { return y < 0. ? 1. : 0.; }
 GfsBcDirichlet U 2
 } }
 GfsBox { id = 10 pid = 1 size = 1 x = -1 y = 2 z = 0 }
-GfsBox { id = 11 pid = 1 size = 1 x = 0 y = 2 z = 0 }
-GfsBox { id = 12 pid = 1 size = 1 x = 1 y = 2 z = 0 }
-GfsBox { id = 13 pid = 6 size = 1 x = 2 y = 2 z = 0 right = GfsBoundaryOutflow }
-GfsBox { id = 14 pid = 3 size = 1 x = -1 y = 0 z = 0 }
-GfsBox { id = 15 pid = 3 size = 1 x = -2 y = 0 z = 0 left = GfsBoundary {
+GfsBox { id = 11 pid = 13 size = 1 x = 0 y = 2 z = 0 }
+GfsBox { id = 12 pid = 7 size = 1 x = 1 y = 2 z = 0 }
+GfsBox { id = 13 pid = 18 size = 1 x = 2 y = 2 z = 0 right = GfsBoundaryOutflow }
+GfsBox { id = 14 pid = 11 size = 1 x = -1 y = 0 z = 0 }
+GfsBox { id = 15 pid = 2 size = 1 x = -2 y = 0 z = 0 left = GfsBoundary {
 GfsBcDirichlet T { return y < 0. ? 1. : 0.; }
 GfsBcDirichlet U 2
 } }
-GfsBox { id = 16 pid = 3 size = 1 x = -2 y = -1 z = 0 left = GfsBoundary {
+GfsBox { id = 16 pid = 15 size = 1 x = -2 y = -1 z = 0 left = GfsBoundary {
 GfsBcDirichlet T { return y < 0. ? 1. : 0.; }
 GfsBcDirichlet U 2
 } }
 GfsBox { id = 17 pid = 3 size = 1 x = -1 y = -1 z = 0 }
-GfsBox { id = 18 pid = 0 size = 1 x = 0 y = -1 z = 0 }
-GfsBox { id = 19 pid = 2 size = 1 x = 1 y = -1 z = 0 }
-GfsBox { id = 20 pid = 4 size = 1 x = 2 y = -1 z = 0 right = GfsBoundaryOutflow }
-GfsBox { id = 21 pid = 4 size = 1 x = 2 y = -2 z = 0 right = GfsBoundaryOutflow }
-GfsBox { id = 22 pid = 0 size = 1 x = 1 y = -2 z = 0 }
-GfsBox { id = 23 pid = 0 size = 1 x = 0 y = -2 z = 0 }
-GfsBox { id = 24 pid = 0 size = 1 x = -1 y = -2 z = 0 }
-GfsBox { id = 25 pid = 7 size = 1 x = -2 y = -2 z = 0 left = GfsBoundary {
+GfsBox { id = 18 pid = 3 size = 1 x = 0 y = -1 z = 0 }
+GfsBox { id = 19 pid = 3 size = 1 x = 1 y = -1 z = 0 }
+GfsBox { id = 20 pid = 8 size = 1 x = 2 y = -1 z = 0 right = GfsBoundaryOutflow }
+GfsBox { id = 21 pid = 16 size = 1 x = 2 y = -2 z = 0 right = GfsBoundaryOutflow }
+GfsBox { id = 22 pid = 5 size = 1 x = 1 y = -2 z = 0 }
+GfsBox { id = 23 pid = 12 size = 1 x = 0 y = -2 z = 0 }
+GfsBox { id = 24 pid = 4 size = 1 x = -1 y = -2 z = 0 }
+GfsBox { id = 25 pid = 19 size = 1 x = -2 y = -2 z = 0 left = GfsBoundary {
 GfsBcDirichlet T { return y < 0. ? 1. : 0.; }
 GfsBcDirichlet U 2
 } }
