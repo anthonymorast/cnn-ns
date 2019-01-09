@@ -21,8 +21,22 @@
   # Use an initial refinement of 6 levels (i.e. 2^6=64x64 for each box)
   Refine 8
 
-  Solid ((x+2)*(x+2) + (y-0.5)*(y-0.5) - 0.05*0.05)
-  Solid ((x+2)*(x+2) + (y+0.5)*(y+0.5) - 0.05*0.05)
+  # GfsSolid docs - http://gfs.sourceforge.net/wiki/index.php/GfsSolid
+  # Solid ((x+2)*(x+2) + (y-0.5)*(y-0.5) - 0.05*0.05)
+  Solid ({
+    double r = 0.05;
+    double xcenter = -2;
+    double ycenter = 0.5;
+    return (x-xcenter)*(x-xcenter) + (y-ycenter)*(y-ycenter) + r*r;
+  })
+  
+  # Solid ((x+2)*(x+2) + (y+0.5)*(y+0.5) - 0.05*0.05)
+  Solid ({
+    double r = 0.05;
+    double xcenter = -2;
+    double ycenter = -0.5;
+    return (x-xcenter)*(x-xcenter) + (y-ycenter)*(y-ycenter) + r*r;
+  })
 
   # Add a passive tracer called T
   VariableTracer {} T
