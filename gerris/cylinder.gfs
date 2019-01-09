@@ -16,13 +16,13 @@
 #######
 35 58 GfsSimulation GfsBox GfsGEdge {} {
   # Stop the simulation at t = 15
-  Time { end = 10 }
+  Time { end = 5 }
 
   # Use an initial refinement of 6 levels (i.e. 2^6=64x64 for each box)
   Refine 8
 
-  Solid ((x+1.5)*(x+1.5) + (y-0)*(y-0) - 0.05*0.05)
-  Solid ((x+1.3)*(x+1.3) + (y+0)*(y+0) - 0.05*0.05)
+  Solid ((x+2)*(x+2) + (y-0.5)*(y-0.5) - 0.05*0.05)
+  Solid ((x+2)*(x+2) + (y+0.5)*(y+0.5) - 0.05*0.05)
 
   # Add a passive tracer called T
   VariableTracer {} T
@@ -58,7 +58,7 @@
     min = -4 max = 4 v = U
   }
 
-  OutputLocation { step = 0.05 } data positions
+  OutputLocation { step = 0.02 } data positions
 
   # Pipes a bitmap PPM image representation of the vorticity field at time 15
   # into the ImageMagick converter "convert" to create the corresponding EPS file
@@ -69,7 +69,7 @@
   # Outputs profiling information at the end of the simulation to standard error
   OutputTiming { start = end } stderr
 
-  GfsOutputSimulation { step = 1 } id2-%3.1f.gfs {
+  GfsOutputSimulation { step = 0.5 } id3-%3.1f.gfs {
     variables = U,V,P
   }
 
