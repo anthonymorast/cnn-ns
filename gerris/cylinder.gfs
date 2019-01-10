@@ -19,13 +19,13 @@
   Time { end = 5 }
 
   # Use an initial refinement of 6 levels (i.e. 2^6=64x64 for each box)
-  Refine 8
+  Refine 7
 
   # GfsSolid docs - http://gfs.sourceforge.net/wiki/index.php/GfsSolid
   # Solid ((x+2)*(x+2) + (y-0.5)*(y-0.5) - 0.05*0.05)
   Solid ({
     double r = 0.05;
-    double xcenter = -2;
+    double xcenter = -1;
     double ycenter = 0.5;
     return (x-xcenter)*(x-xcenter) + (y-ycenter)*(y-ycenter) + r*r;
   })
@@ -33,7 +33,7 @@
   # Solid ((x+2)*(x+2) + (y+0.5)*(y+0.5) - 0.05*0.05)
   Solid ({
     double r = 0.05;
-    double xcenter = -2;
+    double xcenter = -1;
     double ycenter = -0.5;
     return (x-xcenter)*(x-xcenter) + (y-ycenter)*(y-ycenter) + r*r;
   })
@@ -44,7 +44,7 @@
   # Can drastically speed up calculations by chaning the coarseness of the mesh.
   # These to properties ensure the coarseness is at least 6 but up to 10 for 
   # areas with "a lot going on", i.e. vortical motion.
-  AdaptVorticity{ istep=1 } { maxlevel = 10 minlevel=3 cmax=1e-2 }
+  AdaptVorticity{ istep=1 } { maxlevel = 9 minlevel=3 cmax=1e-2 }
   #AdaptGradient { istep=1 } { maxlevel = 10 minlevel=3 cmax=1e-2 } T
 
   # Set the initial x-component of the velocity (REMEMBER TO UPDATE THE BCs)
