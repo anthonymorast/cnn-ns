@@ -33,4 +33,3 @@ pn = ones(ny, nx)
 b = zeros(ny, nx)       # boundary
 
 while udiff > eps:
-    
