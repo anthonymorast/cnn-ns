@@ -20,6 +20,7 @@ from keras.layers import Dense, Activation
 from keras.utils import plot_model
 from keras.callbacks import ModelCheckpoint, TensorBoard
 from keras.optimizers import Adam
+import json
 
 
 class ANN(object):
@@ -74,7 +75,7 @@ class ANN(object):
         self.model.set_weights(weights)
 
 
-    def train(self, train_x, train_y, optimzer='adam', callbacks=[], validation_data=()):
+    def train(self, train_x, train_y, callbacks=[], validation_data=()):
         """
             Trains the model using the Adam optimization algortihm (more to be implemented
             later). Creates a 'history' attr of the LSTM.
@@ -85,6 +86,8 @@ class ANN(object):
          """
         self.history = self.model.fit(train_x, train_y, epochs=self.epochs, batch_size=self.batch_size,
                                       verbose=self.verbose, callbacks=callbacks, validation_data=validation_data)
+        with open('history.json', 'w') as f:
+            json.dump(self.history.history, f)
 
     def get_model(self):
         """

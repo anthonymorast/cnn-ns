@@ -1,0 +1,24 @@
+    hf = h5py.File('trainx_rot.h5', 'r')
+    trainx = hf.get('all')[()]
+    hf = h5py.File('trainy_rot.h5', 'r')
+    trainy = hf.get('all')[()]
+    
+    hf = h5py.File('testx_rot.h5', 'r')
+    testx = hf.get('all')[()]
+    hf = h5py.File('testy_rot.h5', 'r')
+    testy = hf.get('all')[()]
+    
+    print("Size check:", trainx.shape, trainy.shape, testx.shape, testy.shape)
+
+    ## buld model
+    num_layers = 20
+    sizes = [150000, 100000, 75000, 50000, 25000, 20000,
+             15000, 10000, 7000, 4000, 2000, 1000, 500, 100, 20]
+    sizes = [100 for _ in range(num_layers)]
+    model = ANN(input_size=trainx.shape[1], num_hidden_layers=num_layers, hidden_layer_sizes=sizes,
+                  output_size=4, epochs=1500, batch_size=128, fit_verbose=1, optimizer='adam')
+    model.build_model()
+    checkpoint = ModelCheckpoint('model-{epoch:03d}.h5', verbose=1, monitor='mean_absolute_error', save_best_only=True, mode='min')
+    tensorboard = TensorBoard(log_dir='./tf_logs', histogram_freq=10, write_graph=True, write_grads=True, write_images=True)
+    cb = [checkpoint]#,tensorboard]
+    model.train(trainx, trainy, validation_data=(testx, testy), callbacks=cb) 
